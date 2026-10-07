@@ -1,4 +1,8 @@
-#clock {
+#clock,
+#custom-launcher,
+#custom-control,
+#workspaces,
+#window {
     border-radius: 10px;
     background-color: #9564DD;
     padding: 0 14px;
