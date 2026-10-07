@@ -1,0 +1,62 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 8,
+
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "clock",
+        "custom/control"
+    ],
+
+    // ========== Launcher ==========
+    "custom/launcher": {
+        "format": "󰍉",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    // ========== Workspaces ==========
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    // ========== Active Window ==========
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*)": "$1"
+        }
+    },
+
+    // ========== Clock ==========
+    "clock": {
+        "format": "  {:%H:%M  •  %a %d}",
+        "tooltip-format": "{:%A, %B %d %Y}",
+        "interval": 60
+    },
+
+    // ========== Control Menu (far right) ==========
+    "custom/control": {
+        "format": "󰐥",
+        "on-click": "~/.config/waybar/scripts/control-menu.sh",
+        "tooltip": false
+    }
+}
